@@ -1,6 +1,9 @@
 import { Greet } from "./components/Greet";
 import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
+import { Heading } from "./components/Heading";
+import { Oscar } from "./components/Oscar";
+import { Status } from "./components/Status";
 
 export function App() {
   const personName = {
@@ -28,6 +31,12 @@ export function App() {
       <Greet name="Ulas" messsageCount={5} isLoggedIn />
       <Person name={personName} />
       <PersonList names={nameList} />
+      <Status status="success" />
+      <Heading>Placeholder text</Heading>
+      <Oscar>
+        <Heading>Oscar goes to Leonardo Dicaprio!</Heading>
+      </Oscar>
+      <Greet name="Ulas" isLoggedIn />
     </>
   );
 }

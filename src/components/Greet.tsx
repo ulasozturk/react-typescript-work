@@ -1,6 +1,6 @@
 type GreetProps = {
   name: string;
-  messsageCount: number;
+  messsageCount?: number;
   isLoggedIn: boolean;
 };
 
