@@ -6,6 +6,7 @@ import { Oscar } from "./components/Oscar";
 import { Status } from "./components/Status";
 import { Button } from "./components/Button";
 import { Input } from "./components/Input";
+import { Container } from "./components/Container";
 
 export function App() {
   const personName = {
@@ -48,6 +49,7 @@ export function App() {
         value=""
         handleChange={(event) => console.log(event.target.value)}
       />
+      <Container styles={{ border: "1px solid black", padding: "1rem" }} />
     </>
   );
 }
