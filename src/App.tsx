@@ -8,6 +8,7 @@ import { Button } from "./components/Button";
 import { Input } from "./components/Input";
 import { Container } from "./components/Container";
 import { User } from "./components/state/User";
+import { Counter } from "./components/state/Counter";
 
 export function App() {
   const personName = {
@@ -52,6 +53,7 @@ export function App() {
       />
       <Container styles={{ border: "1px solid black", padding: "1rem" }} />
       <User />
+      <Counter />
     </>
   );
 }
