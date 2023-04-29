@@ -9,6 +9,10 @@ import { Input } from "./components/Input";
 import { Container } from "./components/Container";
 import { User } from "./components/state/User";
 import { Counter } from "./components/state/Counter";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
+import { Box } from "./components/context/Box";
+import { UserContextProvider } from "./components/context/UserContext";
+import { UserC } from "./components/context/User";
 
 export function App() {
   const personName = {
@@ -32,7 +36,14 @@ export function App() {
   ];
 
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        rowGap: 20,
+        width: 500,
+      }}
+    >
       <Greet name="Ulas" messsageCount={5} isLoggedIn />
       <Person name={personName} />
       <PersonList names={nameList} />
@@ -54,6 +65,12 @@ export function App() {
       <Container styles={{ border: "1px solid black", padding: "1rem" }} />
       <User />
       <Counter />
-    </>
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
+      <UserContextProvider>
+        <UserC />
+      </UserContextProvider>
+    </div>
   );
 }
