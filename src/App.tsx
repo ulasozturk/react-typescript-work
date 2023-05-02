@@ -20,6 +20,7 @@ import { Private } from "./components/auth/Private";
 import { Profile } from "./components/auth/Profile";
 import { List } from "./components/generics/List";
 import { RandomNumber } from "./components/restrictions/RandomNumber";
+import { Toast } from "./components/templatelisterals/Toast";
 
 export function App() {
   const personName = {
@@ -96,6 +97,7 @@ export function App() {
         onClick={(item) => console.log(item)}
       />
       <RandomNumber value={10} isPositive />
+      <Toast position="center" />
     </div>
   );
 }
