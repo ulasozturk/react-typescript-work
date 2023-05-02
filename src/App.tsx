@@ -23,6 +23,7 @@ import { RandomNumber } from "./components/restrictions/RandomNumber";
 import { Toast } from "./components/templatelisterals/Toast";
 import { CustomButton } from "./components/html/Button";
 import { CustomInput } from "./components/html/Input";
+import { Text } from "./components/polymorphic/Text";
 
 export function App() {
   const personName = {
@@ -104,6 +105,15 @@ export function App() {
         Primary Button
       </CustomButton>
       <CustomInput defaultValue="value" />
+      <Text as="h1" size="lg">
+        Heading
+      </Text>
+      <Text as="p" size="md">
+        Paragraph
+      </Text>
+      <Text as="label" htmlFor="someId" size="sm" color="secondary">
+        Label
+      </Text>
     </div>
   );
 }
